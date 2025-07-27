@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+* {
+    scroll-behavior: smooth;
+    font-family: "Bahnschrift";
+}
+
+@theme {
+    --color-red: #cf1d32;
+    --color-golden: #ebbb0e;
+}
