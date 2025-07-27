@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <>
-            <div className="fixed top-0 left-0 w-full border-b-4 border-double border-b-white p-3 flex items-center justify-around text-red">
+            <div className="fixed top-0 left-0 w-full border-b-4 border-double border-b-white p-3 flex items-center justify-around text-red z-50 bg-black/60 [backdrop-filter:blur(5px)]">
                 <div id="Logo">
                     <h1 className="text-2xl">EventLoop</h1>
                 </div>

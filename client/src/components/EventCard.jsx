@@ -12,7 +12,7 @@ const EventCard = ({
         <div
             className={`border ${
                 color === "red" ? "border-red" : "border-golden"
-            } w-[350px] flex flex-col gap-3 rounded overflow-hidden bg-gray-950/90 backdrop-blur-xs`}
+            } w-[350px] flex flex-col gap-3 rounded overflow-hidden bg-gray-950/90 backdrop-blur-xs group transition-all duration-300`}
         >
             {/* heading */}
             <div
@@ -20,7 +20,7 @@ const EventCard = ({
                     color === "red" ? "border-b-red" : "border-b-golden"
                 } p-2 bg-black/50`}
             >
-                <h1 className="text-2xl font-semibold">
+                <h1 className="text-3xl font-semibold">
                     {title.prefix}
                     <span
                         className={`${
@@ -40,8 +40,9 @@ const EventCard = ({
             </p>
 
             {/* team */}
-            <h3 className="text-lg px-3">
-                <span className="">Participation</span> : {participation}
+            <h3 className="text-lg px-3 font-thin">
+                <span className="font-bold">Participation</span> :{" "}
+                {participation}
             </h3>
 
             {/* prizes */}
@@ -78,11 +79,11 @@ const EventCard = ({
 
             {/* register button */}
             <div
-                className={`p-2 text-center w-full text-shadow-[1px_2px_0_black] ${
+                className={`p-2 text-center w-full text-shadow-[1px_1px_0_black] ${
                     color === "red" ? "bg-red/80" : "bg-golden/80"
-                } cursor-pointer transition-all duration-200 hover:${
+                } cursor-pointer transition-all duration-200 hover:bg-white hover:${
                     color === "red" ? "text-red" : "text-golden"
-                } hover:bg-white`}
+                }`}
             >
                 Register
             </div>
