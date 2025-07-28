@@ -5,7 +5,7 @@ import Contact from "./Contact";
 
 const LandingPage = () => {
     return (
-        <div className="bg-transparent text-white overflow-hidden">
+        <div className="bg-transparent text-white overflow-hidden select-none">
             <video
                 autoPlay
                 muted
@@ -13,7 +13,7 @@ const LandingPage = () => {
                 playsInline
                 preload="auto"
                 className=" w-full h-full object-cover fixed top-0 left-0 z-[-1]"
-                src="golden-vid.mp4"
+                src="bw-vid.mp4"
             ></video>
 
             {/* <img
