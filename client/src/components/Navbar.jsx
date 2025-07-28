@@ -20,7 +20,7 @@ const navItems = [
 const Navbar = () => {
     const [showSideNav, setShowSideNav] = useState(false);
     return (
-        <nav className="fixed z-10 bg-black top-0 left-0 w-full border-b-4 border-double border-b-white flex items-center justify-center">
+        <nav className="fixed z-50 bg-black/60 [backdrop-filter:blur(10px)] top-0 left-0 w-full border-b-4 border-double border-b-white flex items-center justify-center">
             {/* Navbar */}
             <div className="w-[90%] md:w-[85%] lg:w-[80%] p-3 flex items-center justify-between text-red">
                 <div id="Logo">
@@ -28,7 +28,11 @@ const Navbar = () => {
                 </div>
 
                 {/* Hamburger */}
-                <div className="block md:hidden">
+                <div
+                    className={`block md:hidden ${
+                        showSideNav ? "hidden" : "block"
+                    }`}
+                >
                     <Menu onClick={() => setShowSideNav(true)} size={28} />
                 </div>
 
@@ -62,7 +66,7 @@ const Navbar = () => {
             <div
                 className={`md:hidden ${
                     showSideNav ? "translate-x-0" : "translate-x-full"
-                } w-[50%] sm:w-[40%] h-screen absolute top-0 right-0 bg-gray-900/50 [backdrop-filter:blur(10px)] z-50 border-l border-l-white/40 duration-500 transform transition-transform`}
+                } w-[50%] sm:w-[40%] h-screen absolute top-0 right-0 bg-gray-900/60 [backdrop-filter:blur(10px)] z-50 border-l border-l-white/40 duration-500`}
             >
                 {/* Header */}
                 <div className="w-full flex justify-end items-center ">

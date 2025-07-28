@@ -106,15 +106,14 @@ const Home = () => {
             duration: 0.2,
             stagger: 0.2,
         });
-        // timeline.from(
-        //     buttonRef.current,
-        //     {
-        //         autoAlpha: 0,
-        //         duration: 1.3,
-        //         y: -10,
-        //     },
-        //     "-=0.7",
-        // );
+        timeline.from(
+            buttonRef.current,
+            {
+                autoAlpha: 0,
+                duration: 1.3,
+            },
+            "-=0.7",
+        );
         timeline.from(
             loopRef.current,
             {
@@ -237,15 +236,7 @@ const Home = () => {
                 <a
                     href="#events"
                     ref={buttonRef}
-                    className="absolute bottom-0 sm:bottom-0 md:bottom-0 left-1/2 -translate-x-1/2 transform flex items-start justify-center 
-                            w-5 sm:w-7 md:w-7 
-                            h-12 sm:h-16 md:h-18 
-                            rounded-full 
-                            border border-gray-500/50 hover:border-white 
-                            bg-gradient-to-br from-gray-900/70 via-gray-600 to-gray-300/60 
-                            transition-shadow duration-200 
-                            hover:shadow-[0_0_3px_red,0_0_10px_white] 
-                            z-20 "
+                    className="absolute bottom-0 sm:bottom-0 md:bottom-0 left-1/2 flex items-start justify-center -translate-x-1/2 w-5 sm:w-7 md:w-7 h-12 sm:h-16 md:h-18 rounded-full border border-gray-500/50 hover:border-white bg-gradient-to-br from-gray-900/70 via-gray-600 to-gray-300/60 hover:shadow-[0_0_3px_red,0_0_10px_white] transition-shadow duration-200 z-20 "
                 >
                     <i
                         ref={arrowRef}
