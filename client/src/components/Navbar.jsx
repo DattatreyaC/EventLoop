@@ -39,7 +39,7 @@ const Navbar = () => {
                 >
                     {navItems.map((item) => (
                         <a
-                            className="hover:scale-105 transition-all duration-300"
+                            className="hover:scale-105 transition-all duration-300 "
                             key={item.linkAddress}
                             href={item.linkAddress}
                         >
@@ -61,35 +61,34 @@ const Navbar = () => {
             {/* Mobile Sidenav */}
             <div
                 className={`md:hidden ${
-                    showSideNav ? "block" : "hidden"
-                } w-full h-screen absolute top-0 left-0 bg-black`}
+                    showSideNav ? "translate-x-0" : "translate-x-full"
+                } w-[50%] sm:w-[40%] h-screen absolute top-0 right-0 bg-gray-900/50 [backdrop-filter:blur(10px)] z-50 border-l border-l-white/40 duration-500 transform transition-transform`}
             >
                 {/* Header */}
-                <div className="w-full flex justify-center items-center border-b-4 border-double border-b-white">
-                    <div className="w-[90%] p-3 flex items-center justify-between text-red ">
-                        <div id="Logo">
-                            <h1 className="text-2xl">EventLoop</h1>
-                        </div>
-
-                        {/* Close */}
-                        <div>
+                <div className="w-full flex justify-end items-center ">
+                    <div className="py-4 px-5 flex items-center justify-between text-white ">
+                        <div className=" pr-3 sm:pr-6">
                             <X
                                 onClick={() => setShowSideNav(false)}
-                                size={28}
+                                size={33}
                             />
                         </div>
                     </div>
                 </div>
 
                 {/* Nav items */}
-                <div className="mt-8 w-[90%] mx-auto p-3 flex flex-col gap-4 text-white">
+                <div className="mt-8 w-[90%] mx-auto p-3 flex flex-col items-center justify-center gap-10 text-white text-xl sm:text-2xl h-[80%]">
                     {navItems.map((item) => (
-                        <a key={item.linkAddress} href={item.linkAddress}>
+                        <a
+                            key={item.linkAddress}
+                            href={item.linkAddress}
+                            onClick={() => setShowSideNav(false)}
+                        >
                             {item.name}
                         </a>
                     ))}
 
-                    <button className="mt-2 bg-white text-black flex items-center justify-center py-2 gap-1 rounded font-semibold cursor-pointer">
+                    <button className="mt-2 bg-white text-black flex items-center justify-center px-1 py-2 gap-1 rounded-lg font-semibold cursor-pointer text-sm sm:text-lg">
                         <h3>Register with</h3>
                         <img
                             src="google-icon.png"
